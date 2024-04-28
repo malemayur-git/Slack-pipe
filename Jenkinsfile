@@ -1,5 +1,6 @@
 pipeline {
 	agent any 
+slackSend baseUrl: 'https://hooks.slack.com/services/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/', channel: 'ramtek', color: 'good', message: 'slack configuration done', teamDomain: 'Student'
 	triggers {
   		pollSCM '* * * * *'
 	}

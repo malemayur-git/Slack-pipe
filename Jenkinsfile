@@ -1,6 +1,5 @@
 pipeline {
 	agent any
-slackSend baseUrl: 'https://hooks.slack.com/services/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/', channel: 'ramtek', color: 'good', message: 'slack job', teamDomain: 'Student', tokenCredentialId: '929acc78-46a3-41ef-9ff3-f44bbe7b4b8f'
 	triggers {
   		pollSCM '* * * * *'
 	}
@@ -26,4 +25,8 @@ slackSend baseUrl: 'https://hooks.slack.com/services/T07108DAH5H/B070MQ6P0CF/b0O
     		echo "deployment has been done on UAT!"
 			}
 			}}}	
+stage(slack') {
+    steps {
+       slackSend baseUrl: 'https://hooks.slack.com/services/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/', channel: 'ramtek', color: 'good', message: 'xyz', teamDomain: 'Student', tokenCredentialId: '5c396f00-a103-4837-9452-dd71e5a6c367'}
+}
 }}
